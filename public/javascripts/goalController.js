@@ -1,6 +1,10 @@
 angular.module('goalController', [])
 .controller('goalCtrl', function($scope, $http, Goals) {
   Goals.get().success(function(data) {
+  for (var i=0; i<data.length;i++){
+      data[i].ok=i;
+      data[i].ko=1;
+    }
     $scope.goals = data;
   });
   $scope.addGoal = function() {
