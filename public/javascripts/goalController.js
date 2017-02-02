@@ -4,6 +4,7 @@ angular.module('goalController', [])
   for (var i=0; i<data.length;i++){
       data[i].ok=i;
       data[i].ko=1;
+      data[i].percentage= (data[i].ok/(data[i].ko+data[i].ko))*100
     }
     $scope.goals = data;
   });
