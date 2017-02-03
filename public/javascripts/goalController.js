@@ -11,10 +11,11 @@ angular.module('goalController', [])
   $scope.addGoal = function() {
     if(!$scope.goalName || $scope.goalName === '') { return; }
     var goalObject = {
-      description: $scope.goalName
+      description: $scope.goalName,
     };
     Goals.create(goalObject).success(function(data) {
       goalObject._id=data._id;
+      goalObject.percentage=11;
       $scope.goals.push(goalObject);
       $scope.goalName = '';
     });
