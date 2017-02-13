@@ -38,22 +38,22 @@
       <h2 align="center"> Goals Tracker </h2>
       <br>
       <div class="row tracker-heading">
-        <div class="col-md-4 col-xs-offset-1">
-          <h3 align="center"><b>Existing Goals</b></h3>
+        <div class="col-md-4 ">
+          <h3><b>Existing Goals</b></h3>
         </div>
-        <div class="col-md-3 col-md-offset-3">
-          <h3 align="center"><b>Process</b></h3>
+        <div class="col-md-3 col-md-offset-5">
+          <h3 align="center"><b>Accomplishment</b></h3>
         </div>
       </div>
       <div ng-repeat="goal in goals" class="form-group row form-row">
-        <div class="col-md-8 goal col-xs-offset-1">{{goal.description}} </div>
-        <div class="col-xs-3">
+        <div class="col-md-9 goal ">{{goal.description}} </div>
+        <div class="col-xs-2 goal col-xs-offset-1">
           <div class="pull-left"> 
             <label class="btn btn-success">
-              <span class="glyphicon glyphicon-ok" aria-hidden="true" ng-click="addOk(Goal)"></span>
+              <span class="glyphicon glyphicon-ok" aria-hidden="true" ng-click="addOk(goal)"></span>
             </label>
             <label class="btn btn-danger">
-              <span class="glyphicon glyphicon-remove" aria-hidden="true" ng-click="removegoal(Goal)"></span>
+              <span class="glyphicon glyphicon-remove" aria-hidden="true" ng-click="addKo(goal)"></span>
             </label>
           </div>
           </div>
