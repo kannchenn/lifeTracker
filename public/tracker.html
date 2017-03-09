@@ -35,18 +35,26 @@
   </nav>
   <div class="container">
     <div class="form-horizontal tracker-form">
-      <h2 align="center"> Goals Tracker </h2>
-      <br>
+      <h2 align="center"> Goals Tracker </h2> 
+    </div>
+    <br>
+      <div align="center"> 
+          <input style="width:180px;" type="date" ng-model="calendar" class="form-control"/> 
+          <br>
+          <input type="submit" value="Search" ng-click="loadDay(goals, day)">
+      </div>
+    <br>
       <div class="row tracker-heading">
-        <div class="col-md-4 ">
+        <div class="col-md-4 col-md-offset-2">
           <h3><b>Existing Goals</b></h3>
         </div>
-        <div class="col-md-3 col-md-offset-5">
+        <div class="col-md-3 col-md-offset-2">
           <h3 align="center"><b>Accomplishment</b></h3>
         </div>
       </div>
       <div ng-repeat="goal in goals" class="form-group row form-row">
-        <div class="col-md-9 goal ">{{goal.description}} </div>
+        <div class="col-md-6 goal col-md-offset-2">{{goal.description}}</div>
+        {{goal.result}}
         <div class="col-xs-2 goal col-xs-offset-1">
           <div class="pull-left"> 
             <label class="btn btn-success">
